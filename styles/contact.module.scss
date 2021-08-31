@@ -1,0 +1,88 @@
+@import '../styles/globals.scss';
+
+.contact {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 92%;
+
+  background-color: $primary;
+  box-sizing: border-box;
+
+  border: 1px solid $secondary;
+  border-radius: 1rem;
+
+  font-family: $accentText;
+  color: $secondaryText;
+  box-shadow: 0px 3px 5px 0px #DDA15E;
+}
+
+.heading {
+  margin: 1.25rem 1rem;
+  padding: 1rem;
+}
+
+.numbers {
+  margin: 1.25rem 0;
+  padding-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 1px;
+
+  div {
+    box-sizing: border-box;
+    color: $primaryText;
+    font-size: 2.1rem;
+    text-align: right;
+    margin: 1rem 1rem;
+    padding-right: 1rem;
+
+    p {
+      margin-top: -.5rem;
+      padding: 0;
+      color: $secondaryText;
+      font-family: $text;
+      font-size: 1.15rem;
+
+      a {
+        text-decoration: none;
+        letter-spacing: normal;
+        color: $secondaryText;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .contact {
+    // top right bottom left
+    width: max-content;
+    margin-top: 15%;
+    // margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .contact {
+    margin-top: 5%;
+  }
+
+  .heading {
+    margin: .75rem .5rem;
+    padding: .5rem;
+  }
+  
+  .numbers {
+    justify-content: space-between;
+
+    div {
+      font-size: 1.5rem;
+      margin: .5rem;
+    }
+  }
+}

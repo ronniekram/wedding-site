@@ -1,0 +1,174 @@
+@import '../styles/globals.scss';
+
+.container {
+  position: fixed;
+  width: 92%;
+  // z-index: 2;
+  margin: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 5px 0px #DDA15E;
+  background-color: $primary;
+  border: 1px solid $secondary;
+  border-radius: 1rem;
+  font-family: $accentText;
+  color: $primaryText;
+}
+
+.heading {
+  padding: 1rem;
+  font-size: 2.625rem;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+.days {
+  padding: 1rem 1.5rem;
+  margin-top: -1.25rem;
+}
+
+.date {
+  color: $primaryText;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.pdf {
+  margin-top: -.5rem;
+  margin-bottom: .5rem;
+  padding: 1rem;
+  font-size: 1.75rem;
+  text-align: center;
+  -webkit-animation: heartbeat 2s ease-in-out infinite both;
+  animation: heartbeat 2s ease-in-out infinite both;
+
+  a {
+    color: $primaryText;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 415px) {
+  // top right bottom left
+  .container {
+    width: 35%;
+    margin: 1rem 5%;
+  }
+
+  .heading {
+    margin-top: .75rem;
+    margin-right: 1rem;
+  }
+
+  .days {
+    margin-top: -2rem;
+    margin-left: 1rem;
+  }
+
+  .date {
+    letter-spacing: -.5px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  // top right bottom left
+  // margin: -2rem 4% 1rem 4%;
+  .container {
+    position: relative;
+    margin: 1rem 4%;
+    overflow: scroll;
+  }
+
+  .heading {
+    font-size: 1.85rem;
+  }
+
+  .date {
+    font-size: 1.5rem;
+  }
+
+  .pdf {
+    font-size: 1.5rem;
+    padding: .75rem;
+    margin-bottom: .25rem;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .container {
+    position: relative;
+    margin: 1rem 4%;
+    overflow: scroll;
+  }
+}
+
+
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+// @keyframes heartbeat {
+//   from {
+//     -webkit-transform: scale(1);
+//             transform: scale(1);
+//     -webkit-transform-origin: center center;
+//             transform-origin: center center;
+//     -webkit-animation-timing-function: ease-out;
+//             animation-timing-function: ease-out;
+//   }
+//   10% {
+//     -webkit-transform: scale(0.91);
+//             transform: scale(0.91);
+//     -webkit-animation-timing-function: ease-in;
+//             animation-timing-function: ease-in;
+//   }
+//   17% {
+//     -webkit-transform: scale(0.98);
+//             transform: scale(0.98);
+//     -webkit-animation-timing-function: ease-out;
+//             animation-timing-function: ease-out;
+//   }
+//   33% {
+//     -webkit-transform: scale(0.87);
+//             transform: scale(0.87);
+//     -webkit-animation-timing-function: ease-in;
+//             animation-timing-function: ease-in;
+//   }
+//   45% {
+//     -webkit-transform: scale(1);
+//             transform: scale(1);
+//     -webkit-animation-timing-function: ease-out;
+//             animation-timing-function: ease-out;
+//   }
+// }

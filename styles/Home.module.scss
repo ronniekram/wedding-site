@@ -1,0 +1,51 @@
+@import './globals.scss';
+
+.container {
+  min-height: 100vh;
+  height: 100vh;
+
+  .sunIcon {
+    i {
+      font-size: 5rem;
+      color: $accent;
+      // top right bottom left
+      margin: 2rem 1.25rem 2rem 2rem;
+      float: right;
+    }
+  }
+  
+}
+
+.main {
+  position: relative;
+}
+
+.filtered {
+  min-height: 100vh;
+  height: 100vh;
+  min-width: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: $primary;
+  filter: opacity(60%);
+}
+
+@media only screen and (min-width: 414px) {
+  .main {
+    i {
+      font-size: 6rem;
+      margin: 1 1.25rem 2rem 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 413px) {
+  .container {
+    .sunIcon {
+      i {
+        display: none;
+      }
+    }
+  }
+}
